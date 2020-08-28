@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>내 한학기를 KU해줘</title>
+</head>
+<style>
+#logo{
+    position: absolute;
+    width: 397px;
+    height: 140px;
+    left: 745px;
+    top: 262px;
+}
+#konkuk{
+    position: absolute;
+    width: 160px;
+    height: 57px;
+    left: 50px;
+    top: 28px;
+}
+#left_green{
+    position: absolute;
+    width: 85px;
+    height: 50px;
+    left: 504px;
+    top: 0px;
+}
+#right_green{
+    position: absolute;
+    width: 200px;
+    height: 80px;
+    left: 1255px;
+    top: 0px;
+}
+#bottom_green{
+    position: absolute;
+    width: 200px;
+    height: 60px;
+    left: 200px;
+    top: 800px;
+}
+#btn_signup{
+    position: absolute;
+    width: 300px;
+    height: 73px;
+    left: 633px;
+    top: 500px;
+    background: #A7C92C;
+    box-shadow: 0px 6px 11px 2px rgba(167, 201, 44, 0.4);
+    border-radius: 27px;
+    border: 0;
+    outline: 0;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+#btn_login{
+    position: absolute;
+    width: 300px;
+    height: 73px;
+    left: 955px;
+    top: 500px;
+    background: #005128;
+    box-shadow: 0px 6px 11px 2px rgba(0, 81, 40, 0.4);
+    border-radius: 27px;
+    border: 0;
+    outline: 0;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+#copyright{
+    position: absolute;
+    width: 396px;
+    height: 18px;
+    left: 746px;
+    top: 800px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #8C8C8C;
+}
+</style>
+<body>
+    <img id="logo" src="/static/myku_logo.png">
+    <img id="konkuk" src="/static/konkuk.png">
+    <img id="left_green" src="/static/green_top.png">
+    <img id="right_green" src="/static/green_top.png">
+    <img id="bottom_green" src="/static/deep_down.png">
+    <div id="btn">
+            <button type="button" id="btn_signup" onclick="location.href='{% url 'accounts:signup' %}'">
+               회원가입</button>
+            <button type="button" id="btn_login" onclick="location.href='{% url 'accounts:login' %}'">
+                로그인</button>
+    </div>
+    <div id="copyright">COPYRIGHT 2020 KONKUK UNIVERSITY. ALL RIGHTS RESERVED.</div>
+    <!--
+    {% if user.is_authenticated %}
+    <div>{{user.username}} 환영합니다.</div>
+    {% endif %}-->
+</body>
+</html>
