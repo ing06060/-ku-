@@ -11,7 +11,61 @@
     <title>내 한학기를 ku해줘</title>
   </head>
   <body>
-    {% block content %}
+<style>
+.header{
+  display : inline-block;
+  width : 100%;
+  height : 100px;
+}
+.kk{
+  margin-left : 5%;
+  margin-right : -30%;
+  margin-top:3%;
+  display: inline-block;
+}
+.logo{
+    float:right;
+    margin-right : 5%;
+    margin-top: 3%;
+    display: inline-block;
+}
+.top-menu{
+  margin : 0;
+  height : 100px;
+  text-align : center;
+}
+.sub-menu{
+  display : inline-block;
+  width: 67px;
+height: 23px;
+left: 790px;
+top: 45px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+color: #A4A4A4;
+
+}
+</style>
+  
+<div class="header">
+  <div class="kk">
+    <img id="konkuk" src="/static/konkuk.png">
+  </div>
+  {% comment %} <div class="top-menu">
+    <div class="sub-menu">로그아웃<div>
+    <div class="sub-menu">문의하기</div>
+    <div class="sub-menu">내 정보</div>
+  </div> {% endcomment %}
+  <div class="logo">
+     <img id="logo" src="/static/myku_logo.png">
+  </div>
+</div>
+
+
+  {% block content %}
     {% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

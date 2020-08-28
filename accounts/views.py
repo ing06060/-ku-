@@ -102,3 +102,5 @@ def signup(request):
     })
 """
 
+def loginmain(request):
+    return render(request, 'account/login_main.html')
