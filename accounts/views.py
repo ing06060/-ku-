@@ -38,12 +38,12 @@ def signup(request):
     return render(request, 'accounts/signup.html', {'user_form': user_form})
 
 
-def login(request):
+def log_in(request):
     if request.method == 'POST':
         login_form = AuthenticationForm(request, request.POST)
         if login_form.is_valid():
             auth.login(request, request.user)
-            return redirect('/')
+            return redirect(' ')
     else:
         login_form = AuthenticationForm()
         return render(request, 'accounts/login.html', {'login_form': login_form})

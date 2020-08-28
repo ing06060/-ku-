@@ -4,18 +4,208 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+.input_name{
+position: absolute;
+width: 438px;
+height: 67px;
+left: 502px;
+top: 379px;
+background: #FFFFFF;
+border: 1px solid #A7C92C;
+box-sizing: border-box;
+border-radius: 27px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+color: #A4A4A4;
+text-align: center;}
+
+.input_nickname{
+position: absolute;
+width: 438px;
+height: 67px;
+left: 979px;
+top: 379px;
+background: #FFFFFF;
+border: 1px solid #A7C92C;
+box-sizing: border-box;
+border-radius: 27px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+text-align: center;
+color: #A4A4A4;}
+
+.input_email{
+position: absolute;
+width: 438px;
+height: 67px;
+left: 502px;
+top: 466px;
+background: #FFFFFF;
+border: 1px solid #A7C92C;
+box-sizing: border-box;
+border-radius: 27px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+text-align: center;
+color: #A4A4A4;
+}
+.input_major{
+position: absolute;
+width: 438px;
+height: 67px;
+left: 979px;
+top: 466px;
+background: #FFFFFF;
+border: 1px solid #A7C92C;
+box-sizing: border-box;
+border-radius: 27px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+text-align: center;
+color: #A4A4A4;
+}
+.input_pwd{
+position: absolute;
+width: 438px;
+height: 67px;
+left: 502px;
+top: 553px;
+background: #FFFFFF;
+border: 1px solid #A7C92C;
+box-sizing: border-box;
+border-radius: 27px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+text-align: center;
+color: #A4A4A4;
+}
+.input_grade{
+position: absolute;
+width: 438px;
+height: 67px;
+left: 979px;
+top: 553px;
+background: #FFFFFF;
+border: 1px solid #A7C92C;
+box-sizing: border-box;
+border-radius: 27px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+text-align: center;
+color: #A4A4A4;
+}
+.intro_signup{
+position: absolute;
+width: 200px;
+height: 70px;
+left: 872px;
+top: 239px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: 300;
+font-size: 48px;
+line-height: 70px;
+/* identical to box height */
+color: #727272;
+}
+.btn_signup{
+position: absolute;
+width: 915px;
+height: 73px;
+left: 502px;
+top: 757px;
+background: #A7C92C;
+box-shadow: 0px 6px 11px 2px rgba(167, 201, 44, 0.4);
+border-radius: 27px;
+font-family: Noto Sans KR;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 26px;
+/* identical to box height */
+color: #FFFFFF;
+border:0;
+outline:0;
+}
+#logo{
+position: absolute;
+    width: 250px;
+    height: 80px;
+    left: 1650px;
+    top: 0px;
+}
+#konkuk{
+    position: absolute;
+    width: 160px;
+    height: 57px;
+    left: 50px;
+    top: 28px;
+}
+</style>
 <body>
 <div class="row">
     <div class="col"></div>
     <div class="'col-6">
-        <div class="alert alert-primary" role="alert">
-            sign up! </div>
-        <form action="" method="post">
+        <img id="logo" src="/static/myku_logo.png">
+        <img id="konkuk" src="/static/konkuk.png">
+        <div class="intro_signup" role="alert">
+            회원가입</div>
+        <form id="form_signup" action="" method="post">
             {% csrf_token %}
-            {{ user_form.as_p }}
+            <!--{{ user_form.as_p }}-->
+            <p>
+                <label for="id_name" id="name"></label>
+                <input type="text" class="input_name" name="lastname" placeholder="이름" maxlength="100" required id="id_name">
+            </p>
+             <p>
+                <label for="id_nickname" id="nickname"></label>
+                <input type="text" class="input_nickname" name="nickname" placeholder="닉네임" maxlength="100" required id="id_nickname">
+            </p>
+            <p>
+                <label for="id_email" id="email"></label>
+                <input type="text" class="input_email" name="email" placeholder="아이디(학교 계정 아이디)" maxlength="100" required id="id_email">
+            </p>
+            <p>
+                <label for="id_major" id="major"></label>
+                <input type="text" class="input_major" name="major" placeholder="학과정보(선택)" maxlength="100" required id="id_major">
+            </p>
+            <p>
+                <label for="id_pwd" id="pwd"></label>
+                <input type="password" class="input_pwd" name="password" placeholder="비밀번호" maxlength="100" required id="id_pwd">
+            </p>
+            <p>
+                <select name="grade" size="1" form="form_signup" class="input_grade">
+                    학년정보필수
+                    <option value="1학년">1학년</option>
+                    <option value="2학년">2학년</option>
+                    <option value="3학년">3학년</option>
+                    <option value="4학년">4학년</option>
+                </select>
+
+            </p>
+
             <!--{{ user_form.as_p }}
             {{ profile_form.as_p }}-->
-            <input type="submit" value="Sign up" class = 'btn btn-outline-primary'>
+            <input type="submit" value="가입하기" class = 'btn_signup'>
         </form>
     </div>
     <div class="col"></div>

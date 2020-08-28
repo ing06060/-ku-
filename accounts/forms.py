@@ -10,7 +10,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['username', 'first_name', 'last_name', 'major', 'grade', 'email']
+        fields = ['username', 'first_name', 'last_name', 'major', 'grade', 'email', 'nickname']
 
     def clean_re_password(self):
         cd = self.cleaned_data
