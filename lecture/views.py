@@ -14,11 +14,12 @@ def form_test(request):
         if form.is_valid():
             num = form.data['number']
             full_list=getLectureList(num)
-            return render(request,'result.html',{'full_list':full_list})
+            print(full_list)
+            return render(request,'lecture/result.html',{'full_list':full_list})
 
     elif request.method=='GET':
         form = SearchForm()
-        return render(request,'search.html',{'form':form})
+        return render(request,'lecture/search.html',{'form':form})
     else:
         pass
 
