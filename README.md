@@ -16,5 +16,5 @@
 4. 추가적으로 BaseUserManager을 상속받은 UserManager객체를 만들어 유저, 슈퍼유저를 만들수 있도록 구성함
 
 - 발표 pdf
-
+<iframe src="./1_쿠사일생_내 한학기를 KU해줘.pdf"> </iframe>
 
